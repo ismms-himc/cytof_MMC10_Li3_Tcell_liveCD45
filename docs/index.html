@@ -116,7 +116,13 @@
     </div>
 
     <div class='row viz_description' id='clustergram_desc'>
-      <p>Above is a clustergram/heatmap visualization of your input matrix. The rows and columns have been hierarchically clustered, using the Scipy library in Python, using cosine distance and average linkage. Red/blue cells in the matrix represent positive/negative values in your matrix. The visualization interactive (zoomable, reorderable, filterable) and shareable - the current URL is permanent and shareable.</p>
+
+      <p>Above is an interactive clustergram/heatmap visualization of Louvain clustering at level 3 of the MME Li3 dataset. Lovain-3 clusters are shown as columns and markers are shown as rows. Louvain clusters are found for three tissue types (see column categories) and the fraction/frequency of all cells within a tissue is shown as the third column value-based category.</p>
+
+      <p>
+        Clicking marker/rows brings up t-SNE scatterplots (see below) with overlayed marker levels. See  <a href="http://clustergrammer.readthedocs.io/getting_started.html">Getting Started</a> for more information on using the interactive Clustergrammer heatmap. See <a href="http://nbviewer.jupyter.org/github/ismms-himc/cytof_viewer_MME10_Li3_Tcell/blob/master/notebooks/1.0_Load_Louvain_3.ipynb">Jupyter notebook</a> for details on data processing.
+      </p>
+
     </div>
 
 
