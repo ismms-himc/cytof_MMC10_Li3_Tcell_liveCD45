@@ -2,10 +2,10 @@
 cgm = {};
 resize_container();
 
-// var hzome = ini_hzome();
+var hzome = ini_hzome();
 
 default_args = {};
-  // default_args.row_tip_callback = hzome.gene_info;
+  default_args.row_tip_callback = hzome.gene_info;
   // default_args.matrix_update_callback = matrix_update_callback;
   // default_args.dendro_callback = dendro_callback;
   default_args.sidebar_width = 135;
@@ -20,17 +20,19 @@ function load_MHL_cluster(root_tip, row_info){
 }
 
 function make_clust(){
-  var clust_name = 'mult_view.json'
+  var clust_name = 'LV3_clusters.json'
 
-  d3.json('json/mult_view.json', function(network_data){
+  d3.json('json/'+clust_name, function(network_data){
 
     var args = $.extend(true, {}, default_args);
+
+    console.log(args.row_tip_callback)
 
     args.root = '#container-id-1';
     args.network_data = network_data;
 
-    // add mouseover callback to tell user how to load MHL-cluster data
-    args.row_tip_callback = load_MHL_cluster;
+    // // add mouseover callback to tell user how to load MHL-cluster data
+    // args.row_tip_callback = load_MHL_cluster;
 
     cgm['clust'] = Clustergrammer(args);
     d3.select(cgm['clust'].params.root+' .wait_message').remove();

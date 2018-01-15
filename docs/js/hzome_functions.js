@@ -5,6 +5,8 @@ function ini_hzome(root_id){
 
   function get_mouseover(root_tip, gene_symbol){
 
+    console.log('mouseover')
+
     // not sure if this is necessary
     if ( d3.select(root_tip + '_row_tip').classed(gene_symbol) ){
      get_request(root_tip, gene_symbol);
@@ -13,6 +15,8 @@ function ini_hzome(root_id){
   }
 
   function get_request(root_tip, ini_gene_symbol){
+
+    console.log('get_request')
 
     var gene_symbol;
     if (ini_gene_symbol.indexOf(' ') > 0){
