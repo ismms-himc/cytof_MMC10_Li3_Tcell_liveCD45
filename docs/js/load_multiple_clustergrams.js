@@ -19,6 +19,25 @@ function load_MHL_cluster(root_tip, row_info){
     })
 }
 
+function load_tsne_on_click(inst_id){
+  // load t-SNE
+  //////////////////////////////////////////////////////
+  d3.select(inst_id)
+    .selectAll('.row_label_group')
+    .on('click',function(d){
+      marker = d.name.replace(/ /g, '_')
+
+      console.log('load: marker t-sne', marker);
+
+      // make_sub_matrix('Single-MHL-cluster_marker_levels_all_samples_' +
+      //   MHL_cluster, '#container-id-2')
+
+      // d3.select('#single_mhl_cluster_title')
+      //   .html('Single MHL-Cluster Marker Levels Across All Samples: ' + toTitleCase(d.name));
+
+    });
+}
+
 function make_clust(){
   var clust_name = 'LV3_clusters.json'
   // var clust_name = 'LV3_clusters_marker-zscore.json'
@@ -38,19 +57,8 @@ function make_clust(){
     cgm['clust'] = Clustergrammer(args);
     d3.select(cgm['clust'].params.root+' .wait_message').remove();
 
-    // // load different MHL-Clusters by clicking row names
-    // //////////////////////////////////////////////////////
-    // d3.select('#container-id-1')
-    //   .selectAll('.row_label_group')
-    //   .on('click',function(d){
-    //     MHL_cluster = d.name.replace(/ /g, '_')
-    //     console.log('load: ', MHL_cluster);
-    //     make_sub_matrix('Single-MHL-cluster_marker_levels_all_samples_' +
-    //       MHL_cluster, '#container-id-2')
 
-    //     d3.select('#single_mhl_cluster_title')
-    //       .html('Single MHL-Cluster Marker Levels Across All Samples: ' + toTitleCase(d.name));
-    //   })
+    load_tsne_on_click('#container-id-1');
 
     make_sub_matrix('LV3_clusters_marker-zscore', '#container-id-2');
     // make_sub_matrix('All-MHL-clusters_single_sample-201', '#container-id-3');
@@ -93,6 +101,13 @@ function make_sub_matrix(clust_name, container_id){
     cgm[clust_name] = Clustergrammer(args);
     d3.select(cgm[clust_name].params.root+' .wait_message').remove();
   });
+
+  // load_tsne_on_click('#container-id-2');
+
+  // waiting quick-and-dirty way to ensure objects exist before adding click
+  // event
+  setTimeout(load_tsne_on_click, 1000, '#container-id-2')
+
 
 }
 
