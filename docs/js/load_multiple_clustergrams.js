@@ -20,7 +20,7 @@ function load_MHL_cluster(root_tip, row_info){
 }
 
 function make_clust(){
-  var clust_name = 'LV3_clusters.json'
+  var clust_name = 'LV3_clusters_marker-zscore.json'
 
   d3.json('json/'+clust_name, function(network_data){
 
