@@ -49,15 +49,28 @@ function ini_hzome(root_id){
 
   function set_tooltip(data, root_tip, gene_symbol){
 
+    click_description = 'Click to load marker t-SNE';
+
     if (data.name != undefined){
 
       d3.selectAll(root_tip + '_row_tip')
         .html(function(){
             var sym_name = gene_symbol + ': ' + data.name;
             var full_html = '<p>' + sym_name + '</p>' +  '<p>' +
-              data.description + '</p>';
+              data.description + '</p>' + click_description;
+
             return full_html;
         });
+
+    } else {
+
+      d3.selectAll(root_tip + '_row_tip')
+        .html(function(){
+            var full_html = '<p>' + gene_symbol + '</p>' + click_description;
+
+            return full_html;
+        });
+
     }
   }
 
