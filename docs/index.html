@@ -117,7 +117,7 @@
 
     <div class='row viz_description' id='clustergram_desc'>
 
-      <p>Above is an interactive clustergram/heatmap visualization of Louvain clustering at level 3 of the MME Li3 dataset. Lovain-3 clusters are shown as columns and markers are shown as rows. Louvain clusters are found for three tissue types (see column categories) and the fraction/frequency of all cells within a tissue is shown as the third column value-based category.</p>
+      <p>Above is an interactive clustergram/heatmap visualization of Louvain clustering results at level 3 of the MME Li3 dataset. Rows and columns have been hierarchically clustered (using SciPy) using cosine distance and average linkage (see <a href="http://nbviewer.jupyter.org/github/ismms-himc/cytof_viewer_MME10_Li3_Tcell/blob/master/notebooks/1.0_Load_Louvain_3.ipynb">Jupyter notebook</a> for more information). Lovain-3 clusters are shown as columns and markers are shown as rows. Louvain clusters are found for three tissue types (see column categories) and the fraction/frequency of all cells within a tissue is shown as the third column value-based category.</p>
 
       <p>
         Clicking marker/rows brings up t-SNE scatterplots (see below) with overlayed marker levels. See  <a href="http://clustergrammer.readthedocs.io/getting_started.html">Getting Started</a> for more information on using the interactive Clustergrammer heatmap. See <a href="http://nbviewer.jupyter.org/github/ismms-himc/cytof_viewer_MME10_Li3_Tcell/blob/master/notebooks/1.0_Load_Louvain_3.ipynb">Jupyter notebook</a> for details on data processing.
@@ -138,7 +138,7 @@
     </div>
 
     <div class='row viz_description' id='col_sim_desc'>
-      <p>Above is a similarity matrix of the columns in your input matrix. The cells in the matrix represent the similarity between columns, where red/blue represent positive/negative similarity (measured as 1 - cosine-distance). Similarity matrices offer a more detailed view of the similarities and differences between rows/columms, e.g. blue cells indicate data points that behave 'oppositely' and this can not be easily seen in a clustergram/heatmap view.</p>
+      <p>Above is an interactive heatmap of Louvain-3 clustering results after Z-score normalization of marker levels, which helps compare marker levels with different absolute levels. Clicking marker/rows brings up t-SNE scatterplots (see below) with overlayed marker levels.</p>
     </div>
 
 
@@ -156,7 +156,7 @@
     </div>
 
     <div class='row viz_description' id='row_sim_desc'>
-      <p>Above is a similarity matrix of the rows in your input matrix. The cells in the matrix represent the similarity between rows, where red/blue represent positive/negative similarity (measured as 1 - cosine-distance). </p>
+      <p>Above are t-SNE/viSNE plots showing single-cell clustering based on marker levels. The left plot overlays Louvain-3 cluster ids and the right plot overlays marker levels. Clicking on marker/row labels in the above heatmaps can be used to overlay different marker levels.</p>
     </div>
 
 
