@@ -62,6 +62,13 @@
         overflow: hidden;
       }
 
+      .tsne_container{
+        width: 1140px;
+        /*height: 750px;*/
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+
       .viz_title{
         width: 100%;
         font-size: 30px;
@@ -82,6 +89,14 @@
         margin-bottom: 30px;
       }
 
+      .tsne_class{
+        width: 50%;
+        float: left;
+      }
+
+      .tsne_marker{
+        width: 50%;
+      }
     </style>
 
 </head>
@@ -91,7 +106,7 @@
   <div id="wrap" class='container'>
 
     <div class='row viz_title' id='clustergram_title'>
-    Louvain-3 Cluster Heatmap
+    MME10 Li3 Louvain-3 Cluster Heatmap
     </div>
 
     <div class="row" >
@@ -107,7 +122,7 @@
 
 
     <div class='row viz_title'>
-      Louvain-3 Cluster Heatmap: Marker-Z-score
+      MME10 Li3 Louvain-3 Cluster Heatmap: Marker-Z-score
     </div>
 
     <div class="row" >
@@ -123,17 +138,19 @@
 
 
     <div class='row viz_title'  id='tsne_title'>
-      Louvain-3 t-SNE Scatterplot
+      MME10 Li3 Louvain-3 t-SNE Scatterplots
     </div>
 
     <div class="row" >
-      <div id='container-id-3' class='clustergrammer_container sim_mat_container'>
-          <div class='wait_message'>Please wait ...</div>
+      <div id='container-id-3' class='tsne_container sim_mat_container'>
+          <!-- <div class='wait_message'>Please wait ...</div> -->
+          <img src="img/visne_class.png" alt="visne_class" class="tsne_class" >
+          <img src="img/visne_class.png" alt="visne_class" class="tsne_marker">
       </div>
     </div>
 
     <div class='row viz_description' id='row_sim_desc'>
-      <!-- <p>Above is a similarity matrix of the rows in your input matrix. The cells in the matrix represent the similarity between rows, where red/blue represent positive/negative similarity (measured as 1 - cosine-distance). </p> -->
+      <p>Above is a similarity matrix of the rows in your input matrix. The cells in the matrix represent the similarity between rows, where red/blue represent positive/negative similarity (measured as 1 - cosine-distance). </p>
     </div>
 
 
