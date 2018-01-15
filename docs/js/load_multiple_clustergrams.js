@@ -25,9 +25,15 @@ function load_tsne_on_click(inst_id){
   d3.select(inst_id)
     .selectAll('.row_label_group')
     .on('click',function(d){
-      marker = d.name.replace(/ /g, '_')
+      var marker = d.name.replace(/ /g, '_')
 
       console.log('load: marker t-sne', marker);
+
+      // update image
+      d3.select('.tsne_marker')
+        .attr('src',function(){
+          return 'img/visne_' + marker + '.png'
+        });
 
       // make_sub_matrix('Single-MHL-cluster_marker_levels_all_samples_' +
       //   MHL_cluster, '#container-id-2')
