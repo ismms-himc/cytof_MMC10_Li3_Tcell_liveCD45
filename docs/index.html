@@ -12,7 +12,7 @@
 
     <!-- <base href='/clustergrammer/'> -->
 
-    <title>CyTOF Viewer MME10 Li3 Tcell</title>
+    <title>Hepatocellular Carcinoma CyTOF Analysis: MME10_LI03</title>
 
     <link rel="shortcut icon" href="static/icons/graham_cracker.ico"  type="image/x-icon">
 
@@ -71,7 +71,7 @@
 
       .viz_title{
         width: 100%;
-        font-size: 30px;
+        font-size: 27px;
         font-weight: 300;
         /*margin-left: -10px;*/
         margin-top: 10px;
@@ -106,7 +106,7 @@
   <div id="wrap" class='container'>
 
     <div class='row viz_title' id='clustergram_title'>
-    MME10 Li3 Louvain-3 Cluster Heatmap
+    Hepatocellular Carcinoma CyTOF Analysis: MME10_LI03
     </div>
 
     <div class="row" >
@@ -117,7 +117,8 @@
 
     <div class='row viz_description' id='clustergram_desc'>
 
-      <p>Above is an interactive clustergram/heatmap visualization of Louvain clustering results at level 3 of the MME Li3 dataset. Rows and columns have been hierarchically clustered (using SciPy) using cosine distance and average linkage (see <a href="http://nbviewer.jupyter.org/github/ismms-himc/cytof_viewer_MME10_Li3_Tcell/blob/master/notebooks/1.0_Load_Louvain_3.ipynb">Jupyter notebook</a> for more information). Lovain-3 clusters are shown as columns and markers are shown as rows. Louvain clusters are found for three tissue types (see column categories) and the fraction/frequency of all cells within a tissue is shown as the third column value-based category.</p>
+      <p>
+      An HCC lesion was surgically resected from the right liver lobe of a 62-year old patient following 2 doses of nivolumab treatment. Cells were dissociated from the tumor, border and adjacent normal tissue and analyzed by CyTOF. Above is an interactive clustergram/heatmap visualization of Louvain/Phenograph clustering results at level 3. Rows and columns have been hierarchically clustered (using SciPy) using cosine distance and average linkage (see <a href="http://nbviewer.jupyter.org/github/ismms-himc/cytof_viewer_MME10_Li3_Tcell/blob/master/notebooks/1.0_Load_Louvain_3.ipynb">Jupyter notebook</a> for more information). Lovain-3 clusters are shown as columns and markers are shown as rows. Louvain clusters are found for three tissue types (see column categories) and the fraction/frequency of all cells within a tissue is shown as the third column value-based category.</p>
 
       <p>
         Clicking marker/rows brings up t-SNE scatterplots (see below) with overlayed marker levels. See  <a href="http://clustergrammer.readthedocs.io/getting_started.html">Getting Started</a> for more information on using the interactive Clustergrammer heatmap. See <a href="http://nbviewer.jupyter.org/github/ismms-himc/cytof_viewer_MME10_Li3_Tcell/blob/master/notebooks/1.0_Load_Louvain_3.ipynb">Jupyter notebook</a> for details on data processing.
@@ -128,7 +129,7 @@
 
 
     <div class='row viz_title'>
-      MME10 Li3 Louvain-3 Cluster Heatmap: Marker-Z-score
+      Hepatocellular Carcinoma CyTOF Analysis: MME10_LI03 Marker-Z-score
     </div>
 
     <div class="row" >
@@ -144,7 +145,7 @@
 
 
     <div class='row viz_title'  id='tsne_title'>
-      MME10 Li3 Louvain-3 t-SNE Scatterplots
+      Hepatocellular Carcinoma CyTOF Analysis: MME10_LI03 t-SNE Scatterplots
     </div>
 
     <div class="row" >
@@ -156,7 +157,7 @@
     </div>
 
     <div class='row viz_description' id='row_sim_desc'>
-      <p>Above are t-SNE/viSNE plots showing single-cell clustering based on marker levels. The left plot overlays Louvain-3 cluster ids and the right plot overlays marker levels. Clicking on marker/row labels in the above heatmaps can be used to overlay different marker levels.</p>
+      <p>Above are t-SNE/viSNE plots showing single-cell clustering based on marker levels. The left plot overlays Louvain-3 population clusters on the plot, and the right plot shows single cell marker expression distribution. Clicking on marker/row labels in the above heatmaps can be used to visualize different markers.</p>
     </div>
 
 
